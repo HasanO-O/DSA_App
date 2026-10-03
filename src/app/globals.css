@@ -1,0 +1,69 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-canvas: oklch(99% 0.002 250);
+  --color-surface: oklch(100% 0 0);
+  --color-surface-2: oklch(96.5% 0.004 250);
+  --color-line: oklch(91% 0.006 250);
+  --color-ink: oklch(21% 0.015 260);
+  --color-ink-muted: oklch(52% 0.015 260);
+  --color-brand: oklch(56% 0.16 258);
+  --color-brand-soft: oklch(94% 0.03 258);
+  --color-easy: oklch(64% 0.15 155);
+  --color-medium: oklch(72% 0.15 75);
+  --color-hard: oklch(58% 0.19 22);
+  --color-review: oklch(60% 0.15 320);
+}
+
+.dark {
+  --color-canvas: oklch(17% 0.012 265);
+  --color-surface: oklch(21% 0.014 265);
+  --color-surface-2: oklch(25% 0.016 265);
+  --color-line: oklch(31% 0.016 265);
+  --color-ink: oklch(96% 0.005 260);
+  --color-ink-muted: oklch(70% 0.014 260);
+  --color-brand: oklch(72% 0.14 258);
+  --color-brand-soft: oklch(30% 0.05 258);
+  --color-easy: oklch(72% 0.15 155);
+  --color-medium: oklch(80% 0.14 80);
+  --color-hard: oklch(68% 0.18 22);
+  --color-review: oklch(75% 0.14 320);
+}
+
+:root {
+  color-scheme: light dark;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: var(--color-canvas);
+  color: var(--color-ink);
+  -webkit-tap-highlight-color: transparent;
+  text-rendering: optimizeLegibility;
+}
+
+/* Respect users who ask for less motion. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Keep the CodeMirror editor calm inside our surfaces. */
+.cm-editor {
+  height: 100%;
+  font-size: 14px;
+}
+.cm-editor .cm-scroller {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}

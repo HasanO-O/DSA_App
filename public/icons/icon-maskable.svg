@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="DSA Practice">
+  <rect width="512" height="512" fill="#3b5bdb" />
+  <g transform="translate(256 256) scale(0.72) translate(-256 -256)">
+    <g fill="none" stroke="#ffffff" stroke-width="30" stroke-linecap="round">
+      <rect x="128" y="168" width="88" height="72" rx="10" />
+      <rect x="296" y="168" width="88" height="72" rx="10" />
+      <rect x="212" y="312" width="88" height="72" rx="10" />
+      <path d="M216 204h80" />
+      <path d="M172 240v40h168v32" />
+    </g>
+    <text x="256" y="122" font-family="ui-monospace, monospace" font-size="54" font-weight="700" fill="#ffffff" text-anchor="middle">DSA</text>
+  </g>
+</svg>
